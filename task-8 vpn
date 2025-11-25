@@ -1,0 +1,124 @@
+# Task 8 — Identify and Remove Suspicious Browser Extensions
+
+## 📌 Objective
+Understand the role of VPNs in protecting privacy, encrypting traffic, and securing online communication.  
+Gain hands-on experience with VPN installation, connection, IP verification, and analysis.
+
+---
+
+## 🛠 Tools Used
+- **ProtonVPN Free Tier** (recommended)
+- Windscribe Free (alternative)
+
+---
+
+## 📄 Deliverables
+This report includes:
+- VPN setup steps  
+- VPN connection & disconnection steps  
+- IP-verification screenshots  
+- Browsing encryption confirmation  
+- Summary of VPN encryption, benefits, and limitations  
+
+---
+
+# 🧪 Steps Performed (Mini-Guide Execution)
+
+## 1️⃣ Selected a Reputable VPN
+The VPN chosen for this task: **ProtonVPN Free**  
+**Reason:**  
+- No data limit  
+- Strong encryption  
+- No-logs  
+- Open-source Linux client  
+- Reliable free servers  
+
+---
+
+## 2️⃣ Downloaded & Installed the VPN (Kali Linux)
+ProtonVPN repo added + app installed:
+
+```bash
+sudo apt update
+sudo apt install protonvpn
+pip3 install protonvpn-cli
+
+3️⃣ Connected to a VPN Server
+protonvpn-cli connect --fastest
+OR specific country
+protonvpn-cli connect --cc IN
+
+4️⃣ Verified IP Address Change
+
+Opened:
+
+https://whatismyipaddress.com
+Verified:
+
+New IP address
+
+New city/country
+
+ISP changed → VPN provider
+
+5️⃣ Confirmed Traffic Encryption
+
+Visited any HTTPS website.
+Validated:
+
+HTTPS lock icon
+
+TLS certificate valid
+
+Secure tunnel active
+
+6️⃣ Disconnected VPN
+protonvpn-cli disconnect
+Observed changes:
+
+Real IP restored
+
+Speed slightly improved
+
+Latency returned to normal
+
+7️⃣ Researched VPN Encryption
+
+Key points:
+
+ProtonVPN uses AES-256-bit encryption
+
+Protocols: OpenVPN, WireGuard
+
+Protects public WiFi usage
+
+Blocks ISP tracking
+
+Hides real IP address
+
+8️⃣ Summary — Benefits & Limitations
+✔ Benefits
+
+Encrypts entire network traffic
+
+Hides your IP address
+
+Protects against ISP monitoring
+
+Useful on public WiFi
+
+Bypasses basic geo-restrictions
+
+Prevents basic tracking
+
+✖ Limitations
+
+Free servers have limited locations
+
+Speed can drop due to encryption
+
+Not absolute anonymity
+
+VPN provider can see data (if they lie about logs)
+
+Doesn’t protect from malware/phishing
